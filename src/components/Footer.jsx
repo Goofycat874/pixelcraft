@@ -5,8 +5,8 @@ import { Logo } from "./ui.jsx";
 
 const letters = brand.name.split("");
 
-// Solid ink letters; "graph" picks up the one brand colour.
-const colorAt = (i) => (i >= 6 ? "var(--color-accent)" : "var(--color-ink)");
+// Solid ink letters; "craft" picks up the one brand colour.
+const colorAt = (i) => (i >= 5 ? "var(--color-accent)" : "var(--color-ink)");
 
 // Each letter stands up in 3D, one after another, when the wordmark scrolls into view.
 function Letter({ ch, i, n }) {
