@@ -89,9 +89,6 @@ export default function Footer() {
             <a href="/privacy.html" className="hover:text-ink">Privacy Policy</a>
             <a href="/terms.html" className="hover:text-ink">Terms</a>
             <a href="/licenses.txt" className="hover:text-ink">Licenses</a>
-            <a href={`tel:+${brand.phone}`} className="hover:text-ink">
-              Call {brand.phoneDisplay}
-            </a>
             <a href={`https://wa.me/${brand.whatsapp}`} className="hover:text-ink">
               WhatsApp {brand.whatsappDisplay}
             </a>

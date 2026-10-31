@@ -16,7 +16,7 @@ Deploys as a static site (Vercel, Netlify, GitHub Pages). On Vercel, import the 
 
 Everything editable lives in `src/data/site.js`:
 
-- `brand`: name, logo path (`public/logo.png`), call number, WhatsApp number (`918910185902`), Instagram link (empty hides the icon)
+- `brand`: name, logo path (`public/logo.png`), WhatsApp number (`918910185902`), Instagram link (empty hides the icon)
 - `services`: the "What we build" list. `from` names a pricing tab so each row shows a real starting price
 - `devices`: the three concept sites in the hero and the Demos section. `src` is a first-screen capture, `full` a whole-page capture (`fullSize` is its pixel size); both live in `public/work/` and are screenshots of the demos. Labelled as concepts; swap in real client work once you have permission
 - `work`: 3D carousel of real client sites (landscape, about 1200x900, in `public/work/`). Hidden while empty, so stock photos are never shown as client work

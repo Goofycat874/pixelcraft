@@ -133,11 +133,7 @@ export default function Booking() {
                 <a href={`https://wa.me/${brand.whatsapp}`} target="_blank" rel="noreferrer" className="font-medium text-accent-text underline-offset-4 hover:underline">
                   {brand.whatsappDisplay}
                 </a>{" "}
-                directly, or call{" "}
-                <a href={`tel:+${brand.phone}`} className="font-medium text-accent-text underline-offset-4 hover:underline">
-                  {brand.phoneDisplay}
-                </a>
-                .
+                directly.
               </dd>
             </div>
             <div>

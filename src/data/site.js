@@ -7,9 +7,6 @@ export const brand = {
   // WhatsApp number in international format, no "+" or spaces (91 = India).
   whatsapp: "918910185902",
   whatsappDisplay: "+91 89101 85902",
-  // Phone number printed on the price sheet for calls.
-  phone: "917003439897",
-  phoneDisplay: "70034 39897",
   // Leave empty to hide the Instagram icon.
   instagram: "",
   email: "",
