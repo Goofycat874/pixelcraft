@@ -1,6 +1,6 @@
-# Creatograph
+# Pixelcraft
 
-Website for Creatograph, a website design & development studio: daylight glass theme, 3D scroll animations, packages, a WhatsApp booking form and three live concept sites.
+Website for Pixelcraft, a website design & development studio: daylight glass theme, 3D scroll animations, packages, a WhatsApp booking form and three live concept sites.
 
 ## Run it
 
@@ -23,7 +23,7 @@ Everything editable lives in `src/data/site.js`:
 - `packs`, `addons`, `pricingNotes`: the price sheet. `bookingOptions` feeds the quote form
 - `timelines`, `process`, `faqs`
 
-Logo: `public/logo.png` (transparent) and `public/favicon.png`. Brand blue is `--color-accent` in `src/index.css`, sampled from the logo.
+Logo: `public/logo.png` (512px rounded tile of the Pixelcraft icon), `public/favicon.png` (64px) and `public/apple-touch-icon.png` (180px). Brand blue is `--color-accent` in `src/index.css`.
 
 ## Booking
 
@@ -31,7 +31,7 @@ The form validates name, phone and project type, then opens `wa.me/918910185902`
 
 ## Theme
 
-Daylight glass: a fixed blue-to-peach sky (`Background.jsx`, `.sky` in `src/index.css`) with three slow, blurred lights, frosted white glass panels, navy ink (`--color-ink`) and logo blue (`--color-accent`) for actions. `--color-accent-text` is the darker blue for small text. The nav uses the original `public/logo.png`; `public/logo-light.png` is kept for dark backgrounds.
+Daylight glass: a fixed blue-to-peach sky (`Background.jsx`, `.sky` in `src/index.css`) with three slow, blurred lights, frosted white glass panels, navy ink (`--color-ink`) and logo blue (`--color-accent`) for actions. `--color-accent-text` is the darker blue for small text. The nav, intro and footer use `public/logo.png`, a rounded tile cut from the Pixelcraft logo.
 
 ## Style rules
 
@@ -67,7 +67,7 @@ All CSS 3D and Motion; there is no WebGL on the main site, so it loads fast on p
 - `/demos/monsoon/`: Monsoon Bean, café. Rain on a canvas, the headline falls in like raindrops, the photo irises open to fill the screen, a split-flap menu board, a latte poured and drawn on scroll, coffee bags that spin as they pass.
 - `/demos/crumb/`: Crumb & Copper, bakery (mobile-first, with a bottom tab bar). Pink and red with Unbounded type. Words rise like dough, pastries pop onto a plate around a spinning "fresh out at 6" stamp, a marquee band, an oven where the tray rises and browns behind the glass before the door drops open, and a working tray: add pastries (they fly to the tray button), pick a pick-up time, and the ticket prints each line. Pastry art is Microsoft's Fluent Emoji 3D (MIT, via `@lobehub/fluent-emoji-3d`, copied into `demos/crumb/img/`; licence in `public/licenses.txt`).
 
-`demos/shared/` has what all three share: the cross-page view transition, the "Concept by Creatograph" badge (links back to the device section) and the popup every booking button opens, which says the business is made up. The pages are `noindex`.
+`demos/shared/` has what all three share: the cross-page view transition, the "Concept by Pixelcraft" badge (links back to the device section) and the popup every booking button opens, which says the business is made up. The pages are `noindex`.
 All three run with no pinning or animation under reduced motion.
 
 To refresh the device screenshots after editing a demo, screenshot each page after its intro: Velorra at 1280x800 at 1.25x (1600x1000), Monsoon at 720x960 at 1.25x (900x1200), Crumb at 390x823 at 1.385x (540x1140), into `public/work/`. The `*-full.jpg` files are whole-page captures with reduced motion (badge and tab bar hidden): Velorra at 1280 wide scaled to 1000, Monsoon at 720 scaled to 560, Crumb at 390 (1.5x) scaled to 420; update `fullSize` in site.js to match.
@@ -84,12 +84,12 @@ Checked before release:
 - axe (WCAG 2.1 AA) passes with no violations on the home, privacy, terms and 404 pages, and on all three demos (with motion, with reduced motion and with the popup open). `npm audit` is clean.
 - `public/licenses.txt` is regenerated on every build with the licence text of all production dependencies (all permissive: MIT, ISC, BSD, Apache-2.0, OFL fonts).
 - Privacy Policy (`/privacy.html`, DPDP Act 2023 and IT Rules) and Terms (`/terms.html`) are linked from the footer, pricing note and booking form.
-- Social previews: set `SITE_URL` (e.g. `https://creatograph.in`) in Vercel env vars for a custom domain. Without it, the Vercel production URL is used.
+- Social previews: set `SITE_URL` (e.g. `https://pixelcraft.in`) in Vercel env vars for a custom domain. Without it, the Vercel production URL is used.
 
 ### Before launch, the owner must
 
 1. Prices are the real price sheet. Re-check them for typos.
 2. Read `public/privacy.html` and `public/terms.html` and confirm they match how you actually work (advance, refunds, ownership, timelines). These are a sensible starting point, not legal advice.
 3. Confirm the FAQ answers (timelines, payment) match your real process.
-4. Check that the name "Creatograph" is free to use as a business name/trademark in India (search the IP India trademark registry).
+4. Check that the name "Pixelcraft" is free to use as a business name/trademark in India (search the IP India trademark registry).
 5. If you register for GST, add your GSTIN and legal business name to the Terms page.

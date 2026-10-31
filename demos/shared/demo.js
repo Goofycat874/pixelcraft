@@ -16,7 +16,7 @@ export function mountBadge({ dark = false, bottom = 16 } = {}) {
   const span = document.createElement("span");
   span.append("Concept by ");
   const b = document.createElement("b");
-  b.textContent = "Creatograph";
+  b.textContent = "Pixelcraft";
   span.append(b);
   a.append(img, span);
   document.body.append(a);
@@ -35,7 +35,7 @@ export function mountCta(business) {
   h.id = "cg-title";
   h.textContent = `This ${business} is made up. The website is real.`;
   const p = document.createElement("p");
-  p.textContent = "Creatograph designed and built this page to show what we can do. Want one like it for your business?";
+  p.textContent = "Pixelcraft designed and built this page to show what we can do. Want one like it for your business?";
   const actions = document.createElement("div");
   actions.className = "cg-actions";
   const go = document.createElement("a");

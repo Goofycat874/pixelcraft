@@ -2,8 +2,8 @@
 // Swap in real prices, services and images without touching the components.
 
 export const brand = {
-  name: "Creatograph",
-  logo: "/logo.png", // logo-light.png is a version with the dark parts recoloured, for dark backgrounds
+  name: "Pixelcraft",
+  logo: "/logo.png", // rounded app-icon tile cut from the Pixelcraft logo; works on light and dark backgrounds
   // WhatsApp number in international format, no "+" or spaces (91 = India).
   whatsapp: "918910185902",
   whatsappDisplay: "+91 89101 85902",
@@ -18,7 +18,7 @@ export const brand = {
 // Business name used in the footer copyright. The Privacy Policy and Terms are static pages in
 // public/privacy.html and public/terms.html; update them by hand if your details change.
 export const legal = {
-  businessName: "Creatograph",
+  businessName: "Pixelcraft",
 };
 
 // "What we build" list. `price` is shown on the row; `service`/`plan` prefill the quote form.
@@ -77,12 +77,12 @@ export const work = [];
 
 // Old placeholder list kept only as a format reference; not rendered.
 const _exampleWork = [
-  { title: "Cafe website", tag: "Business site", image: "https://picsum.photos/seed/creatograph-cafe-site/1200/900" },
-  { title: "Clothing store", tag: "E-commerce", image: "https://picsum.photos/seed/creatograph-fashion-store/1200/900" },
-  { title: "Clinic booking site", tag: "Business site", image: "https://picsum.photos/seed/creatograph-clinic/1200/900" },
-  { title: "Real estate listings", tag: "Web app", image: "https://picsum.photos/seed/creatograph-realestate/1200/900" },
-  { title: "Coaching landing page", tag: "Landing page", image: "https://picsum.photos/seed/creatograph-coaching/1200/900" },
-  { title: "Restaurant ordering", tag: "E-commerce", image: "https://picsum.photos/seed/creatograph-restaurant/1200/900" },
+  { title: "Cafe website", tag: "Business site", image: "https://picsum.photos/seed/pixelcraft-cafe-site/1200/900" },
+  { title: "Clothing store", tag: "E-commerce", image: "https://picsum.photos/seed/pixelcraft-fashion-store/1200/900" },
+  { title: "Clinic booking site", tag: "Business site", image: "https://picsum.photos/seed/pixelcraft-clinic/1200/900" },
+  { title: "Real estate listings", tag: "Web app", image: "https://picsum.photos/seed/pixelcraft-realestate/1200/900" },
+  { title: "Coaching landing page", tag: "Landing page", image: "https://picsum.photos/seed/pixelcraft-coaching/1200/900" },
+  { title: "Restaurant ordering", tag: "E-commerce", image: "https://picsum.photos/seed/pixelcraft-restaurant/1200/900" },
 ];
 
 // Website packs, as printed on the price sheet. price is in INR.
