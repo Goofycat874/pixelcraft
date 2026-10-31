@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crumb &amp; Copper | Concept site by Creatograph</title>
+    <meta name="description" content="Crumb &amp; Copper is a concept bakery website designed and built by Creatograph." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#ffd6e2" />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a href="#top" class="brand" aria-label="Crumb &amp; Copper home">crumb<span>&amp;</span>copper</a>
+      <nav class="links" aria-label="Sections">
+        <a href="#oven">Fresh at six</a>
+        <a href="#bakes">Today's tray</a>
+      </nav>
+      <a href="#order" class="tray-btn" aria-label="Your tray, 0 items">
+        <i data-icon="bag" aria-hidden="true"></i>
+        <span class="tray-label">Your tray</span>
+        <b class="count" aria-hidden="true">0</b>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">Neighbourhood bakery</p>
+          <h1 class="hero-title">Baked before the city <em>wakes.</em></h1>
+          <p class="hero-sub">Croissants, cardamom knots and slow sourdough, out of the oven at six. Order tonight, pick up warm.</p>
+          <div class="hero-actions">
+            <a href="#bakes" class="btn">Order for tomorrow</a>
+            <a href="#oven" class="btn line">How we bake</a>
+          </div>
+        </div>
+        <div class="cluster" aria-hidden="true">
+          <img class="p p-croissant" src="./img/croissant.webp" alt="" width="256" height="256" />
+          <img class="p p-doughnut" src="./img/doughnut.webp" alt="" width="256" height="256" />
+          <img class="p p-cupcake" src="./img/cupcake.webp" alt="" width="256" height="256" />
+          <img class="p p-cookie" src="./img/cookie.webp" alt="" width="256" height="256" />
+          <img class="p p-baguette" src="./img/baguette.webp" alt="" width="256" height="256" />
+          <img class="p p-coffee" src="./img/coffee.webp" alt="" width="256" height="256" />
+          <div class="stamp">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="ring" d="M100 100 m-74 0 a74 74 0 1 1 148 0 a74 74 0 1 1 -148 0" /></defs>
+              <text><textPath href="#ring" textLength="462" lengthAdjust="spacing">FRESH OUT AT 6 AM &#8226; FRESH OUT AT 6 AM &#8226;&#160;</textPath></text>
+            </svg>
+            <img src="./img/croissant.webp" alt="" width="256" height="256" />
+          </div>
+        </div>
+      </section>
+
+      <div class="band" aria-hidden="true">
+        <div class="band-track">
+          <span>Butter croissants</span><img src="./img/croissant.webp" alt="" /><span>Cardamom knots</span><img src="./img/knot.webp" alt="" /><span>Sourdough</span><img src="./img/baguette.webp" alt="" /><span>Strawberry shortcake</span><img src="./img/cake.webp" alt="" /><span>Cookies</span><img src="./img/cookie.webp" alt="" />
+          <span>Butter croissants</span><img src="./img/croissant.webp" alt="" /><span>Cardamom knots</span><img src="./img/knot.webp" alt="" /><span>Sourdough</span><img src="./img/baguette.webp" alt="" /><span>Strawberry shortcake</span><img src="./img/cake.webp" alt="" /><span>Cookies</span><img src="./img/cookie.webp" alt="" />
+        </div>
+      </div>
+
+      <section class="oven-sec" id="oven">
+        <div class="oven-sticky">
+          <div class="oven-copy">
+            <p class="eyebrow">Fresh at six</p>
+            <p class="time" aria-hidden="true">04:30</p>
+            <p class="phase">The dough is proving.</p>
+          </div>
+          <div class="oven">
+            <div class="oven-top">
+              <span class="knob"></span>
+              <span class="readout"><b class="deg">0</b>°C</span>
+              <span class="knob"></span>
+            </div>
+            <div class="cavity">
+              <div class="glow"></div>
+              <div class="coil top"></div>
+              <div class="tray">
+                <img src="./img/croissant.webp" alt="" />
+                <img src="./img/knot.webp" alt="" />
+                <img src="./img/croissant.webp" alt="" />
+              </div>
+              <div class="coil bottom"></div>
+              <div class="steam" aria-hidden="true"><i></i><i></i><i></i></div>
+              <div class="door">
+                <div class="face front"><span class="window"></span><span class="handle"></span></div>
+                <div class="face back"></div>
+              </div>
+            </div>
+            <div class="feet"><i></i><i></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bakes" id="bakes">
+        <div class="bakes-head">
+          <h2 class="title">Today's <em>tray.</em></h2>
+          <p class="lede">Tap to add. Everything here comes out of the oven between six and seven.</p>
+        </div>
+        <ul class="grid">
+          <li class="card big tone-red" data-id="croissant" data-price="120">
+            <img src="./img/croissant.webp" alt="" width="256" height="256" />
+            <div class="meta">
+              <h3>Butter croissant</h3>
+              <p>27 layers, cultured butter, baked dark.</p>
+              <div class="buy"><b>₹120</b><button type="button" class="add">Add</button></div>
+            </div>
+          </li>
+          <li class="card tone-white" data-id="knot" data-price="110">
+            <img src="./img/knot.webp" alt="" width="256" height="256" />
+            <div class="meta"><h3>Cardamom knot</h3><div class="buy"><b>₹110</b><button type="button" class="add">Add</button></div></div>
+          </li>
+          <li class="card tone-butter" data-id="doughnut" data-price="130">
+            <img src="./img/doughnut.webp" alt="" width="256" height="256" />
+            <div class="meta"><h3>Chocolate doughnut</h3><div class="buy"><b>₹130</b><button type="button" class="add">Add</button></div></div>
+          </li>
+          <li class="card wide tone-pink" data-id="cake" data-price="220">
+            <img src="./img/cake.webp" alt="" width="256" height="256" />
+            <div class="meta">
+              <h3>Strawberry shortcake</h3>
+              <p>Sponge, whipped cream and fresh strawberries.</p>
+              <div class="buy"><b>₹220</b><button type="button" class="add">Add</button></div>
+            </div>
+          </li>
+          <li class="card tone-white" data-id="cookie" data-price="90">
+            <img src="./img/cookie.webp" alt="" width="256" height="256" />
+            <div class="meta"><h3>Brown butter cookie</h3><div class="buy"><b>₹90</b><button type="button" class="add">Add</button></div></div>
+          </li>
+          <li class="card tone-red" data-id="cupcake" data-price="150">
+            <img src="./img/cupcake.webp" alt="" width="256" height="256" />
+            <div class="meta"><h3>Pink velvet cupcake</h3><div class="buy"><b>₹150</b><button type="button" class="add">Add</button></div></div>
+          </li>
+          <li class="card wide tone-butter" data-id="baguette" data-price="160">
+            <img src="./img/baguette.webp" alt="" width="256" height="256" />
+            <div class="meta">
+              <h3>Sourdough baguette</h3>
+              <p>36-hour ferment. Crackly crust, open crumb.</p>
+              <div class="buy"><b>₹160</b><button type="button" class="add">Add</button></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="order" id="order">
+        <div class="order-copy">
+          <h2 class="title">Warm by seven.<br /><em>Gone by eleven.</em></h2>
+          <p class="lede">Order before 9 pm and we keep your tray by the counter, still warm when you get here.</p>
+          <fieldset class="pickup">
+            <legend>Pick-up time</legend>
+            <label><input type="radio" name="pickup" value="6:30 am" /><span>6:30</span></label>
+            <label><input type="radio" name="pickup" value="7:00 am" checked /><span>7:00</span></label>
+            <label><input type="radio" name="pickup" value="7:30 am" /><span>7:30</span></label>
+            <label><input type="radio" name="pickup" value="8:00 am" /><span>8:00</span></label>
+          </fieldset>
+        </div>
+        <div class="printer">
+          <div class="slot"></div>
+          <div class="ticket">
+            <p class="t-head">Your tray <span class="t-time">Pick-up 7:00 am</span></p>
+            <ul class="t-lines"></ul>
+            <p class="t-empty">Nothing yet. Add something from today's tray.</p>
+            <p class="t-total"><span>Total</span><span class="t-sum">₹0</span></p>
+            <a href="#order" class="btn place" data-cta>Place order</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p class="foot-mark" aria-hidden="true">crumb<span>&amp;</span>copper</p>
+      <div class="foot-row">
+        <span>Crumb &amp; Copper is a made-up bakery.</span>
+        <a href="/">Concept site designed and built by Creatograph</a>
+      </div>
+    </footer>
+
+    <nav class="tabbar" aria-label="Quick links">
+      <a href="#bakes"><i data-icon="cookie" aria-hidden="true"></i>Bakes</a>
+      <a href="#oven"><i data-icon="flame" aria-hidden="true"></i>Oven</a>
+      <a href="#order" class="tab-tray"><i data-icon="bag" aria-hidden="true"></i>Tray <b class="count" aria-hidden="true">0</b></a>
+    </nav>
+
+    <p class="sr" role="status" aria-live="polite"></p>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monsoon Bean | Concept site by Creatograph</title>
+    <meta name="description" content="Monsoon Bean is a concept café website designed and built by Creatograph." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#f3ece2" />
+    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a href="#top" class="brand" aria-label="Monsoon Bean home">Monsoon <i>Bean</i></a>
+      <nav class="links" aria-label="Sections">
+        <a href="#menu">Menu</a>
+        <a href="#brew">How we brew</a>
+        <a href="#beans">Beans</a>
+      </nav>
+      <a href="#visit" class="btn small" data-cta>Reserve a table</a>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div class="hero-sticky">
+          <figure class="window">
+            <img src="./coffee.jpg" alt="An espresso in a red cup and saucer on a wooden table" width="600" height="400" />
+          </figure>
+          <div class="hero-inner">
+            <p class="eyebrow hero-eyebrow">Slow coffee · open 8 am till the rain stops</p>
+            <h1 class="hero-title">Coffee for <em>rainy</em> afternoons.</h1>
+            <p class="hero-sub">Single-origin Indian beans, roasted every Monday and poured slow in a corner that smells of wet earth and cardamom.</p>
+            <div class="hero-actions">
+              <a href="#visit" class="btn" data-cta>Reserve a table</a>
+              <a href="#menu" class="btn line">See the menu</a>
+            </div>
+          </div>
+          <p class="pour-line" aria-hidden="true">Come in. <em>It's pouring.</em></p>
+          <canvas class="rain" aria-hidden="true"></canvas>
+        </div>
+      </section>
+
+      <section class="menu" id="menu">
+        <div class="menu-head">
+          <p class="eyebrow">Today's board</p>
+          <h2 class="section-title reveal">The menu, <em>chalked fresh</em></h2>
+        </div>
+        <div class="board">
+          <div class="board-top">
+            <span class="flaps" aria-hidden="true">NOW POURING</span>
+            <span class="flaps clock" aria-hidden="true">08:00</span>
+          </div>
+          <ul>
+            <li>
+              <div class="item">
+                <span class="sr">Filter kapi, ₹140.</span>
+                <span class="flaps" aria-hidden="true">FILTER KAPI</span>
+                <p>Decoction, chicory and frothed milk in a brass tumbler.</p>
+              </div>
+              <span class="price" aria-hidden="true">₹140</span>
+            </li>
+            <li>
+              <div class="item">
+                <span class="sr">Cardamom latte, ₹210.</span>
+                <span class="flaps" aria-hidden="true">CARDAMOM LATTE</span>
+                <p>Double shot, crushed green cardamom, a little jaggery.</p>
+              </div>
+              <span class="price" aria-hidden="true">₹210</span>
+            </li>
+            <li>
+              <div class="item">
+                <span class="sr">Cold brew, ₹220.</span>
+                <span class="flaps" aria-hidden="true">COLD BREW</span>
+                <p>Steeped for 18 hours. Served over one big ice cube.</p>
+              </div>
+              <span class="price" aria-hidden="true">₹220</span>
+            </li>
+            <li>
+              <div class="item">
+                <span class="sr">Pour-over, ₹260.</span>
+                <span class="flaps" aria-hidden="true">POUR-OVER</span>
+                <p>Araku single origin, brewed to order. Ask what's on.</p>
+              </div>
+              <span class="price" aria-hidden="true">₹260</span>
+            </li>
+            <li>
+              <div class="item">
+                <span class="sr">Jaggery cortado, ₹190.</span>
+                <span class="flaps" aria-hidden="true">JAGGERY CORTADO</span>
+                <p>Equal parts espresso and milk, sweetened the old way.</p>
+              </div>
+              <span class="price" aria-hidden="true">₹190</span>
+            </li>
+            <li>
+              <div class="item">
+                <span class="sr">Banana bread, ₹160.</span>
+                <span class="flaps" aria-hidden="true">BANANA BREAD</span>
+                <p>Served warm, with salted butter on the side.</p>
+              </div>
+              <span class="price" aria-hidden="true">₹160</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="brew" id="brew">
+        <div class="brew-sticky">
+          <div class="brew-copy">
+            <p class="eyebrow">How we brew</p>
+            <h2 class="section-title">Four minutes, <em>no shortcuts</em></h2>
+            <ol class="steps">
+              <li>
+                <b>01</b>
+                <div><h3>Grind</h3><p>Medium-fine, seconds before brewing. Never the night before.</p></div>
+              </li>
+              <li>
+                <b>02</b>
+                <div><h3>Bloom</h3><p>A splash of water at 93°C. The grounds puff up and breathe out.</p></div>
+              </li>
+              <li>
+                <b>03</b>
+                <div><h3>Pour</h3><p>Slow spirals, then steamed milk folded in from the edge.</p></div>
+              </li>
+              <li>
+                <b>04</b>
+                <div><h3>Sip</h3><p>Both hands round the cup. Window seat if you're lucky.</p></div>
+              </li>
+            </ol>
+          </div>
+          <div class="cup-stage">
+            <div class="steam" aria-hidden="true"><i></i><i></i><i></i></div>
+            <svg class="cup" viewBox="0 0 440 400" aria-hidden="true">
+              <defs>
+                <radialGradient id="crema" cx="50%" cy="44%" r="58%">
+                  <stop offset="0" stop-color="#c08a52" />
+                  <stop offset="0.5" stop-color="#8a5530" />
+                  <stop offset="1" stop-color="#3b2215" />
+                </radialGradient>
+                <radialGradient id="milk" r="50%">
+                  <stop offset="0" stop-color="#fbf4e8" />
+                  <stop offset="0.7" stop-color="#f0dfc6" />
+                  <stop offset="1" stop-color="#c99a6a" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="porcelain" cx="38%" cy="32%" r="75%">
+                  <stop offset="0" stop-color="#ffffff" />
+                  <stop offset="1" stop-color="#e6dccf" />
+                </radialGradient>
+                <clipPath id="inside"><circle cx="200" cy="200" r="112" /></clipPath>
+              </defs>
+              <circle cx="200" cy="200" r="190" fill="#ece2d4" stroke="#ddcfbd" stroke-width="2" />
+              <circle cx="200" cy="200" r="150" fill="none" stroke="#e0d4c4" stroke-width="2" />
+              <path d="M330 300 L402 372" stroke="#b9ada0" stroke-width="9" stroke-linecap="round" />
+              <ellipse cx="318" cy="288" rx="16" ry="24" transform="rotate(-45 318 288)" fill="#cfc4b8" />
+              <rect x="316" y="182" width="78" height="36" rx="18" fill="url(#porcelain)" stroke="#ddcfbd" stroke-width="2" />
+              <circle cx="200" cy="200" r="130" fill="url(#porcelain)" stroke="#ddcfbd" stroke-width="2" />
+              <circle cx="200" cy="200" r="114" fill="#e7dccd" />
+              <g clip-path="url(#inside)">
+                <g class="grounds">
+                  <circle cx="170" cy="180" r="4" /><circle cx="214" cy="166" r="3" /><circle cx="236" cy="210" r="4" />
+                  <circle cx="188" cy="232" r="3" /><circle cx="152" cy="214" r="3" /><circle cx="206" cy="198" r="5" />
+                  <circle cx="250" cy="182" r="3" /><circle cx="226" cy="246" r="4" /><circle cx="160" cy="160" r="3" />
+                  <circle cx="196" cy="140" r="4" /><circle cx="262" cy="232" r="3" /><circle cx="140" cy="190" r="4" />
+                  <circle cx="178" cy="258" r="4" /><circle cx="240" cy="150" r="3" /><circle cx="214" cy="270" r="3" />
+                  <circle cx="186" cy="204" r="3" />
+                </g>
+                <circle class="coffee" cx="200" cy="200" r="114" fill="url(#crema)" />
+                <g class="bubbles" fill="none" stroke="#d7a877" stroke-width="2">
+                  <circle cx="160" cy="176" r="7" /><circle cx="236" cy="168" r="5" /><circle cx="246" cy="236" r="8" />
+                  <circle cx="176" cy="240" r="5" /><circle cx="204" cy="150" r="6" /><circle cx="148" cy="214" r="4" />
+                  <circle cx="222" cy="210" r="4" />
+                </g>
+                <circle class="milk" cx="200" cy="206" r="84" fill="url(#milk)" />
+                <path class="heart" pathLength="1" d="M200 262 C176 244 140 222 140 186 C140 162 158 146 178 146 C190 146 197 154 200 162 C203 154 210 146 222 146 C242 146 260 162 260 186 C260 222 224 244 200 262 Z" fill="#fdf8ef" stroke="#fdf8ef" stroke-width="7" stroke-linejoin="round" />
+                <path class="tail" pathLength="1" d="M200 262 L200 304" stroke="#f3e4cd" stroke-width="5" stroke-linecap="round" />
+              </g>
+              <circle cx="200" cy="200" r="114" fill="none" stroke="rgb(60 40 25 / 0.12)" stroke-width="5" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="beans" id="beans">
+        <div class="beans-head">
+          <p class="eyebrow">Take some home</p>
+          <h2 class="section-title reveal">Roasted every <em>Monday</em></h2>
+          <p class="beans-sub">Three Indian estates on rotation. Ground to order for your filter, moka pot or French press.</p>
+        </div>
+        <div class="shelf">
+          <article class="bag" style="--c: #b5562d; --c2: #8a3c1c">
+            <div class="face front">
+              <small>Monsoon Bean · 250 g</small>
+              <h3>Chikmagalur</h3>
+              <p>Dark chocolate, jaggery, a little smoke.</p>
+              <div class="bag-foot"><span>Medium-dark</span><b>₹520</b></div>
+            </div>
+            <div class="face back" aria-hidden="true"><p>Roasted on Mondays in small batches. Best within four weeks of the date on the seal.</p></div>
+            <div class="face side l" aria-hidden="true"><span>MONSOON BEAN</span></div>
+            <div class="face side r" aria-hidden="true"><span>CHIKMAGALUR</span></div>
+            <div class="face top" aria-hidden="true"></div>
+          </article>
+          <article class="bag" style="--c: #4f6b4a; --c2: #34482f">
+            <div class="face front">
+              <small>Monsoon Bean · 250 g</small>
+              <h3>Araku Valley</h3>
+              <p>Orange peel, black tea, honey.</p>
+              <div class="bag-foot"><span>Light</span><b>₹640</b></div>
+            </div>
+            <div class="face back" aria-hidden="true"><p>Grown by tribal farming co-ops in the Eastern Ghats. Lovely as a pour-over.</p></div>
+            <div class="face side l" aria-hidden="true"><span>MONSOON BEAN</span></div>
+            <div class="face side r" aria-hidden="true"><span>ARAKU VALLEY</span></div>
+            <div class="face top" aria-hidden="true"></div>
+          </article>
+          <article class="bag" style="--c: #2f3f5c; --c2: #1f2a3e">
+            <div class="face front">
+              <small>Monsoon Bean · 250 g</small>
+              <h3>Coorg</h3>
+              <p>Caramel, clove, roasted nuts.</p>
+              <div class="bag-foot"><span>Medium</span><b>₹560</b></div>
+            </div>
+            <div class="face back" aria-hidden="true"><p>Shade-grown under pepper vines. Our house filter coffee blend starts here.</p></div>
+            <div class="face side l" aria-hidden="true"><span>MONSOON BEAN</span></div>
+            <div class="face side r" aria-hidden="true"><span>COORG</span></div>
+            <div class="face top" aria-hidden="true"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="visit" id="visit">
+        <canvas class="rain" aria-hidden="true"></canvas>
+        <p class="eyebrow">Rain or shine</p>
+        <h2 class="visit-title">Save a seat <em>by the window.</em></h2>
+        <p class="visit-sub">Open 8 am to 10 pm, every day. Board games on the shelf, wifi password on the cups.</p>
+        <a href="#visit" class="btn" data-cta>Reserve a table</a>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>Monsoon Bean is a made-up café.</span>
+      <a href="/">Concept site designed and built by Creatograph</a>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

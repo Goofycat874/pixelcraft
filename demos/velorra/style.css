@@ -1,0 +1,142 @@
+:root {
+  --bg: #0d0f12;
+  --ink: #f2f2ef;
+  --muted: #9ea2a9;
+  --line: #24272d;
+  --volt: #d7ff3a;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+* { box-sizing: border-box; margin: 0; }
+html { background: var(--bg); color: var(--ink); scroll-behavior: smooth; overflow-x: clip; }
+body { font-family: "Geist Variable", ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+a { color: inherit; }
+.display, h1, h2, .brand, .spec strong, .ghost-word, .card-num { font-family: "Archivo Variable", ui-sans-serif, sans-serif; }
+
+/* ---------- nav ---------- */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 40;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 18px clamp(16px, 4vw, 56px);
+  background: linear-gradient(to bottom, rgb(13 15 18 / 0.85), rgb(13 15 18 / 0));
+}
+.brand { font-weight: 800; font-stretch: 125%; letter-spacing: 0.2em; font-size: 18px; text-decoration: none; }
+.links { display: flex; gap: 32px; font-size: 15px; color: var(--muted); }
+.links a { text-decoration: none; transition: color 0.2s; }
+.links a:hover { color: var(--ink); }
+@media (max-width: 720px) { .links { display: none; } }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--volt); color: #0d0f12; font-weight: 600; font-size: 15px;
+  padding: 14px 22px; border-radius: 6px; text-decoration: none; white-space: nowrap;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -14px rgb(215 255 58 / 0.7); }
+.btn.small { padding: 10px 16px; font-size: 14px; }
+.btn.ghost { background: rgb(13 15 18 / 0.7); backdrop-filter: blur(6px); color: var(--ink); border: 1px solid #3a3e45; }
+.btn.ghost:hover { box-shadow: none; border-color: var(--ink); }
+.btn.big { padding: 18px 30px; font-size: 17px; }
+:focus-visible { outline: 2px solid var(--volt); outline-offset: 3px; }
+
+/* ---------- hero: pinned while the car drives off ---------- */
+.hero { height: 210vh; }
+.hero-sticky { position: sticky; top: 0; height: 100dvh; overflow: hidden; perspective: 1200px; }
+.hero-copy { position: relative; z-index: 3; padding: clamp(96px, 14vh, 140px) clamp(16px, 4vw, 56px) 0; transform-origin: 50% 0%; }
+.hero-title { font-weight: 800; font-stretch: 112%; text-transform: uppercase; font-size: clamp(56px, 10.5vw, 168px); line-height: 0.88; letter-spacing: -0.035em; }
+.hero-title .line { display: block; overflow: hidden; padding-bottom: 0.04em; }
+.hero-title .line > span { display: inline-block; }
+.hero-title em { font-style: normal; color: var(--volt); }
+.hero-sub { margin-top: 22px; max-width: 30rem; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.55; color: var(--muted); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+
+.stage { position: absolute; inset: auto 0 0 0; height: 62%; z-index: 2; perspective: 700px; }
+.floor {
+  position: absolute; left: -30%; right: -30%; bottom: -12%; height: 70%;
+  transform: rotateX(74deg); transform-origin: 50% 100%;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.07) 1px, transparent 1px);
+  background-size: 90px 90px;
+  -webkit-mask-image: linear-gradient(to top, #000 30%, transparent 95%);
+  mask-image: linear-gradient(to top, #000 30%, transparent 95%);
+}
+.speed { position: absolute; inset: 20% 0 30% 0; pointer-events: none; }
+.speed i { position: absolute; height: 2px; width: 22vw; border-radius: 2px; background: linear-gradient(90deg, transparent, rgb(215 255 58 / 0.7)); opacity: 0; }
+.speed i:nth-child(1) { top: 10%; left: 6%; }
+.speed i:nth-child(2) { top: 34%; left: 30%; width: 30vw; }
+.speed i:nth-child(3) { top: 52%; left: 2%; width: 16vw; }
+.speed i:nth-child(4) { top: 70%; left: 22%; }
+.speed i:nth-child(5) { top: 86%; left: 44%; width: 12vw; }
+.car-wrap { position: absolute; right: clamp(-40px, 2vw, 60px); bottom: 7%; width: min(980px, 86vw, 118vh); will-change: transform; }
+@media (max-width: 720px) { .car-wrap { width: 112vw; right: -4vw; bottom: 15%; } }
+.car { display: block; width: 100%; height: auto; }
+.underglow { position: absolute; left: 10%; right: 6%; bottom: 0; height: 22%; border-radius: 50%; background: radial-gradient(closest-side, rgb(215 255 58 / 0.28), transparent); filter: blur(22px); }
+.beam { position: absolute; left: 82%; top: 44%; width: 42%; height: 30%; background: radial-gradient(ellipse at left, rgb(235 245 255 / 0.35), transparent 70%); filter: blur(10px); opacity: 0.8; }
+
+/* ---------- specs ---------- */
+.specs { height: 300vh; }
+.specs-sticky { position: sticky; top: 0; height: 100dvh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding: 0 clamp(16px, 4vw, 56px); perspective: 1000px; }
+.ghost-word { position: absolute; top: 50%; left: 0; transform: translateY(-50%); font-weight: 900; font-stretch: 125%; font-size: 26vw; line-height: 1; white-space: nowrap; color: transparent; -webkit-text-stroke: 1.5px #262a31; pointer-events: none; }
+.kicker { position: relative; font-size: clamp(32px, 4vw, 56px); font-weight: 800; font-stretch: 110%; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 48px; }
+.spec-grid { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.spec { border-top: 1px solid var(--line); padding-top: 18px; transform-origin: 50% 100%; }
+.spec small { display: block; color: var(--muted); font-size: 14px; }
+.spec strong { display: block; margin-top: 10px; font-weight: 800; font-stretch: 110%; font-size: clamp(48px, 6vw, 96px); letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
+.spec strong em { font-style: normal; font-size: 0.32em; color: var(--muted); margin-left: 6px; letter-spacing: 0; }
+.battery { position: relative; margin-top: 56px; display: flex; align-items: center; gap: 16px; }
+.cells { flex: 1; height: 14px; border-radius: 4px; border: 1px solid #3a3e45; padding: 2px; }
+.cells i { display: block; height: 100%; width: 100%; border-radius: 2px; background: repeating-linear-gradient(90deg, var(--volt) 0 22px, transparent 22px 26px); transform-origin: 0 50%; transform: scaleX(1); }
+.pct { font-family: "Archivo Variable"; font-weight: 700; font-size: 18px; min-width: 4ch; text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) { .spec-grid { grid-template-columns: 1fr 1fr; gap: 28px 18px; } }
+
+/* ---------- colours ---------- */
+.colours { height: 340vh; background: #111317; }
+.colours-sticky { position: sticky; top: 0; height: 100dvh; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 16px; perspective: 1400px; }
+.colours h2 { font-size: clamp(36px, 5vw, 72px); font-weight: 800; font-stretch: 110%; text-transform: uppercase; letter-spacing: -0.02em; }
+.colour-name { margin-top: 10px; font-size: 18px; color: var(--muted); min-height: 1.5em; }
+.colour-stage { position: relative; width: min(980px, 94vw); margin-top: 3vh; transform-style: preserve-3d; }
+/* The photo is graphite grey. A paint colour is two layers over it, masked to the bodywork only
+   (paint.webp leaves out glass, wheels, lights and trim): white "screen" to lighten, then a colour layer. */
+.paint-car { position: relative; isolation: isolate; transform-origin: 50% 70%; --tint: #000; --amount: 0; --lift: 0; --sweep: -20%; }
+.paint-car .lift, .paint-car .tint, .paint-car .shine {
+  position: absolute; inset: 0; pointer-events: none;
+  -webkit-mask: url("./paint.webp") center / 100% 100% no-repeat; mask: url("./paint.webp") center / 100% 100% no-repeat;
+}
+.paint-car .lift { background: #fff; opacity: var(--lift); mix-blend-mode: screen; }
+.paint-car .tint { background: var(--tint); opacity: var(--amount); mix-blend-mode: color; }
+.paint-car .shine { background: linear-gradient(100deg, transparent calc(var(--sweep) - 14%), rgb(255 255 255 / 0.55) var(--sweep), transparent calc(var(--sweep) + 14%)); mix-blend-mode: soft-light; }
+.swatches { display: flex; gap: 14px; margin-top: 3vh; }
+.swatches button { width: 40px; height: 40px; border-radius: 50%; background: var(--c); border: 3px solid #111317; outline: 1px solid #3a3e45; cursor: pointer; transition: transform 0.3s var(--ease), outline-color 0.3s; }
+.swatches button[aria-pressed="true"] { outline: 2px solid var(--ink); transform: scale(1.15); }
+
+/* ---------- features: horizontal 3D carousel ---------- */
+.features { height: 380vh; }
+.features-sticky { position: sticky; top: 0; height: 100dvh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; perspective: 1400px; }
+.features h2 { font-size: clamp(32px, 4.5vw, 64px); font-weight: 800; font-stretch: 110%; text-transform: uppercase; letter-spacing: -0.02em; padding: 0 clamp(16px, 4vw, 56px); margin-bottom: 40px; }
+.track { display: flex; gap: 28px; width: max-content; padding: 0 30vw; transform-style: preserve-3d; will-change: transform; }
+.card {
+  position: relative; width: min(380px, 76vw); height: min(440px, 56vh); flex: none;
+  border-radius: 14px; padding: 28px; overflow: hidden;
+  background: #16191e; border: 1px solid #262a31;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  transform-style: preserve-3d;
+}
+.card::before { content: ""; position: absolute; width: 140%; aspect-ratio: 1; right: -60%; top: -70%; border-radius: 50%; background: radial-gradient(closest-side, var(--a), transparent 70%); opacity: 0.35; }
+.card-num { position: absolute; top: 22px; left: 28px; font-weight: 800; font-stretch: 125%; font-size: 64px; color: var(--a); line-height: 1; }
+.card h3 { position: relative; font-family: "Archivo Variable"; font-stretch: 110%; font-size: 30px; letter-spacing: -0.01em; }
+.card p { position: relative; margin-top: 10px; color: var(--muted); line-height: 1.55; }
+
+/* ---------- cta + footer ---------- */
+.cta { min-height: 90vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 22px; padding: 80px 16px; perspective: 1000px; }
+.cta-title { font-size: clamp(48px, 9vw, 150px); font-weight: 900; font-stretch: 115%; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.035em; transform-origin: 50% 100%; }
+.cta p { color: var(--muted); font-size: 18px; max-width: 34rem; }
+.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 28px clamp(16px, 4vw, 56px) 90px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+
+/* Without motion: no pinning, everything in its final state */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero, .specs, .colours, .features { height: auto; }
+  .hero-sticky, .specs-sticky, .colours-sticky, .features-sticky { position: relative; height: auto; min-height: 100dvh; }
+  .hero-sticky { min-height: 100dvh; }
+  .track { overflow-x: auto; padding: 0 16px 20px; width: auto; }
+}
